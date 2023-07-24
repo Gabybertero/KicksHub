@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: 'Nunito Sans', sans-serif;
@@ -6,45 +7,58 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 
-
-.logo {
-  width: 100px;
-  height: 100px;
-  cursor: pointer;
-}
-
-header {
+.header {
+  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px;
-  background-color: black;
-  position: sticky;
-  top: 0px;
+  height: 125px;
+  padding: 5px 10%;
 }
 
-ul {
+.header .logo {
+  cursor: pointer;
+}
+
+.header .logo img {
+  height: 100px;
+  width: auto;
+  transition: all 0.3s;
+}
+
+.header .logo img:hover {
+  transform: scale(1.1);
+}
+
+.header .navLinks {
   list-style: none;
 }
 
-.navA {
-  color: beige;
-  text-decoration: none;
-  text-align: center;
-  justify-content: space-between;
-  display: inline-flex;
-}
-
-ul, li {
+.header .navLinks li {
   display: inline-block;
-  padding: 0px 20px;
+  padding: 0 20px;
 }
 
-.imagenCarrito {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
+.header .navLinks li:hover {
+  transform: scale(1.1);
 }
+
+.header .navLinks a {
+  color: beige;
+  font-size: 700;
+  text-decoration: none;
+}
+
+.header .navLinks a:hover {
+  color: wheat;
+}
+
+.header .carrito img {
+  height: 20px;
+  width: auto;
+}
+
+
 
 body {
   background-color: rgb(243, 199, 199);
